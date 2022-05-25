@@ -1,6 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Weather App</string>
-
     <string name="search_places">Search Places</string>
     <string name="demo_date">9 January, 2:41 pm</string>
     <string name="default_numbers">100</string>
@@ -17,5 +16,4 @@
     <string name="weather_type">Drizzle</string>
     <string name="sunrise">Sunrise</string>
     <string name="sunset">Sunset</string>
-
 </resources>

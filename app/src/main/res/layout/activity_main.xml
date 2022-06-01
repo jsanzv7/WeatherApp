@@ -95,7 +95,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/google_sans_medium"
                         android:text="@string/demo_date"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="@dimen/text_large">
 
                     </TextView>

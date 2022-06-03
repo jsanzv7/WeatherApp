@@ -16,9 +16,14 @@ import androidx.core.app.ActivityCompat
 import androidx.core.location.LocationManagerCompat.getCurrentLocation
 import androidx.core.location.LocationManagerCompat.isLocationEnabled
 import androidx.databinding.DataBindingUtil
+import com.example.weatherapp.POJO.ModelClass
+import com.example.weatherapp.Utilities.ApiUtilities
 import com.example.weatherapp.databinding.ActivityMainBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
@@ -97,8 +102,29 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * It fetches the current weather data from the API.
+     *
+     * @param latitude The latitude of the location to fetch weather for.
+     * @param longitude The longitude of the location you want to get the weather for.
+     */
     private fun fetchCurrentLocationWeather(latitude: String, longitude: String) {
 
+        /* Showing the progress bar. */
+        activityMainBinding.pbLoading.visibility=View.VISIBLE
+        /* Calling the getCurrentWeatherData() function in the ApiInterface class. */
+        ApiUtilities.getApiInterface()?.getCurrentWeatherData(latitude,longitude,API_KEY)?.enqueue(object :
+            Callback<ModelClass> {
+            override fun onResponse(call: Call<ModelClass>, response: Response<ModelClass>) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onFailure(call: Call<ModelClass>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+
+        }
+        )
 
 
     }
@@ -129,6 +155,8 @@ class MainActivity : AppCompatActivity() {
     companion object {
         /* A constant that is used to request the user's location. */
         private const val PERMISSION_REQUEST_ACCESS_LOCATION = 100
+        /* A constant that is used to store the API key. */
+        const val API_KEY = "e6211fcc04c907de119bfc9efe5f739a"
     }
 
     /**

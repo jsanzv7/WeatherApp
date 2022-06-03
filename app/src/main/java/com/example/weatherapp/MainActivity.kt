@@ -10,10 +10,13 @@ import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
+import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.location.LocationManagerCompat.getCurrentLocation
 import androidx.core.location.LocationManagerCompat.isLocationEnabled
+import androidx.databinding.DataBindingUtil
+import com.example.weatherapp.databinding.ActivityMainBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 
@@ -21,12 +24,29 @@ class MainActivity : AppCompatActivity() {
 
     /* Declaring a variable that will be used to get the user's location. */
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
+    /* Binding the layout to the activity. */
+    private lateinit var activityMainBinding: ActivityMainBinding
 
+    /**
+     * The function is called when the activity is created. It binds the layout to the activity and
+     * gets the current location of the user
+     *
+     * @param savedInstanceState This is the bundle that contains the activity's previously saved
+     * state.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
+        /* Calling the superclass's implementation of the method. */
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        /* Binding the layout to the activity. */
+        activityMainBinding= DataBindingUtil.setContentView(this,R.layout.activity_main)
         /* Getting the current location of the user. */
+        /* Hiding the action bar. */
+        supportActionBar?.hide()
+        /* Getting the user's location. */
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
+        /* Hiding the layout until the user's location is fetched. */
+        activityMainBinding.rlMainLayout.visibility = View.GONE
+
         getCurrentLocation();
     }
 
@@ -78,6 +98,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun fetchCurrentLocationWeather(latitude: String, longitude: String) {
+
 
 
     }

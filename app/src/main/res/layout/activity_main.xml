@@ -55,7 +55,7 @@
                             android:drawablePadding="@dimen/padding_large"
                             android:drawableTint="@color/black"
                             android:hint="@string/search_places"
-                            android:ime0ptions="actionSearch"
+                            android:imeOptions="actionSearch"
                             android:inputType="text"
                             android:paddingStart="@dimen/padding_large"
                             android:paddingEnd="@dimen/padding_large"

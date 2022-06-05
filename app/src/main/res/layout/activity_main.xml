@@ -230,7 +230,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="0dp"
                             android:background="@drawable/snow_bg"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:baselineAligned="false">
 
                             <RelativeLayout
                                 android:layout_width="0dp"
@@ -244,7 +245,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:orientation="vertical"
-                                    android:padding="@dimen/padding_x_small">
+                                    android:padding="@dimen/padding_x_small"
+                                    tools:ignore="UselessParent">
 
                                     <ImageView
                                         android:layout_width="25dp"
@@ -342,7 +344,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:orientation="vertical"
-                                    android:padding="@dimen/padding_x_small">
+                                    android:padding="@dimen/padding_x_small"
+                                    tools:ignore="UselessParent">
 
                                     <ImageView
                                         android:layout_width="25dp"
@@ -387,7 +390,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="0dp"
                             android:background="@drawable/snow_bg"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:baselineAligned="false">
 
                             <RelativeLayout
                                 android:layout_width="0dp"

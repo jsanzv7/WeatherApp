@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/clear_bg.xml" value="0.546" />
+        <entry key="app/src/main/res/drawable-v24/cloud_bg.xml" value="0.902" />
         <entry key="app/src/main/res/drawable-v24/mist_bg.xml" value="0.546" />
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.71" />
         <entry key="app/src/main/res/layout-v23/activity_main.xml" value="0.24444444444444444" />

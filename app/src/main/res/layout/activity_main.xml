@@ -351,7 +351,7 @@
                                         android:layout_width="25dp"
                                         android:layout_height="25dp"
                                         android:layout_gravity="center_horizontal"
-                                        android:src="@drawable/windspeed">
+                                        android:src="@drawable/wind_speed">
 
                                     </ImageView>
 
@@ -532,7 +532,7 @@
                                         android:textSize="@dimen/text_med"
                                         android:gravity="center"
                                         android:textColor="@color/white"
-                                        android:text="@string/temperarature_in_f">
+                                        android:text="@string/temperature_in_f">
 
                                     </TextView>
 

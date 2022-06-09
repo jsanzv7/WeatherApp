@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil.*
 import com.example.weatherapp.POJO.ModelClass
 import com.example.weatherapp.Utilities.ApiUtilities
 import com.example.weatherapp.databinding.ActivityMainBinding
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         /* Calling the superclass implementation of the method. */
         super.onCreate(savedInstanceState)
         /* Binding the layout to the activity. */
-        activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        activityMainBinding = setContentView(this, R.layout.activity_main)
         /* Getting the current location of the user. */
         /* Hiding the action bar. */
         supportActionBar?.hide()
